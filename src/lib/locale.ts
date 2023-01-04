@@ -10,7 +10,7 @@ type InnerLocale = {
 }
 export function getLocaleDefaults(): InnerLocale {
   return {
-    weekdays: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+    weekdays: ['🔆', '🌜', '♂', '☿', '🪙', '♀️', '🪐'],
     months: [
       'January',
       'February',
@@ -56,11 +56,11 @@ export function localeFromDateFnsLocale(dateFnsLocale: DateFnsLocale): InnerLoca
   if (dateFnsLocale.localize) {
     for (let i = 0; i < 7; i++) {
       // widths: narrow, short, abbreviated, wide, any
-      locale.weekdays[i] = dateFnsLocale.localize.day(i, { width: 'short' })
+    //  locale.weekdays[i] = dateFnsLocale.localize.day(i, { width: 'short' })
     }
 
     for (let i = 0; i < 12; i++) {
-      locale.months[i] = dateFnsLocale.localize.month(i, { width: 'wide' })
+    //  locale.months[i] = dateFnsLocale.localize.month(i, { width: 'wide' })
     }
   }
   return locale
